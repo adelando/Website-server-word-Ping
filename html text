@@ -1,0 +1,19 @@
+<script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <div class="server-status">
+      <p style="text-align:center">Server currently <b><span class="server-online"></span></b>, with <b><span data-playercounter-ip="play.aydaacraft.online">0</span></b> players on!</p?
+
+    </div>
+    <script>
+      MinecraftAPI.getServerStatus('play.aydaacraft.online', {
+        port: 25565 // optional, only if you need a custom port
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? '<font color="greed"><u>ONLINE</u></font>' : '<font color="red">OFFLINE</font>';
+      });
+    </script>
+
+ <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
