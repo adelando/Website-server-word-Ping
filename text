@@ -12,7 +12,7 @@
         }
 
         // you can change these to your own message!
-        document.querySelector('.server-online').innerHTML = status.online ? '<font color="greed"><u>ONLINE</u></font>' : '<font color="red">OFFLINE</font>';
+        document.querySelector('.server-online').innerHTML = status.online ? '<font color="green"><u>ONLINE</u></font>' : '<font color="red">OFFLINE</font>';
       });
     </script>
 
